@@ -7,14 +7,15 @@ const Login = ({ store }) => {
     <div className="Login">
       <h3>Nimi</h3>
       <input type="text" ref={el => (input = el)} />
-      <button
-        type="button"
+      <div
+        className="main-button"
+        role="button"
         onClick={() => {
           store.register(input.value);
         }}
       >
-        Lähetä
-      </button>
+        Seuraava
+      </div>
     </div>
   );
 };

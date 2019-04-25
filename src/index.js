@@ -16,13 +16,13 @@ const store = AppStore.create(
   { socket }
 );
 
-const snapshot = localStorage.getItem("state");
+const snapshot = localStorage.getItem("bifaesc/state");
 if (snapshot) {
-  applySnapshot(store, JSON.parse(snapshot));
+  //applySnapshot(store, JSON.parse(snapshot));
 }
 
 onSnapshot(store, snapshot => {
-  localStorage.setItem("state", JSON.stringify(snapshot));
+  localStorage.setItem("bifaesc/state", JSON.stringify(snapshot));
 });
 
 ReactDOM.render(

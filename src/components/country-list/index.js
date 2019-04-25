@@ -22,7 +22,7 @@ const CountryList = ({
         {countries.map((c, i) => {
           if (c.id === country) j += 1;
           return (
-            <div key={c.id} className="list-item">
+            <div key={c.id} className="list-item disable-select">
               <span className="position">
                 {c.id !== country && `${i + 1 - j}.`}
               </span>
@@ -34,9 +34,9 @@ const CountryList = ({
           );
         })}
       </Reorder>
-      <button type="button" onClick={vote}>
+      <div role="button" className="main-button" onClick={vote}>
         Lähetä
-      </button>
+      </div>
     </div>
   );
 };

@@ -1,2 +1,21 @@
 .App {
 }
+
+.main-button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #a71d68;
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

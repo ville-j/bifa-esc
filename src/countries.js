@@ -17,7 +17,7 @@ export default [
   },
   {
     id: "es",
-    name: "Spain"
+    name: "Espanja"
   },
   {
     id: "fr",
@@ -29,7 +29,7 @@ export default [
   },
   {
     id: "bg",
-    name: "Belgium"
+    name: "Belgia"
   },
   {
     id: "no",

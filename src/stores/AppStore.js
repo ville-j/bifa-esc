@@ -13,9 +13,18 @@ const AppStore = types
     countries: types.array(Country)
   })
   .actions(self => ({
+    afterCreate() {
+      self.socket.on("country", data => {
+        if (data.length === 0) throw Error("no free countries left :(");
+        self.setCountry(data);
+      });
+    },
+    setCountry(country) {
+      self.country = country;
+    },
     register(name) {
       self.name = name;
-      self.country = "uk";
+      self.socket.send("register", { name });
     },
     updateCountries(countries) {
       self.countries = countries;
@@ -25,12 +34,19 @@ const AppStore = types
         country: self.votableCountries[i].id,
         points: p
       }));
-      getEnv(self).socket.send("points", givenPoints);
+      self.socket.send("vote", {
+        votingCountry: self.country,
+        name: self.name,
+        points: givenPoints
+      });
     }
   }))
   .views(self => ({
     get votableCountries() {
       return self.countries.filter(c => c.id !== self.country);
+    },
+    get socket() {
+      return getEnv(self).socket;
     }
   }));
 

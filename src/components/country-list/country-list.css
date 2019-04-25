@@ -1,3 +1,7 @@
+.CountryList {
+  margin-bottom: 50px;
+}
+
 .list-item {
   cursor: pointer;
 }
@@ -19,13 +23,10 @@
   width: 22px;
 }
 
-.list-item.placeholder > span {
-  display: none;
+.list-item.placeholder {
+  opacity: 0;
 }
 
-.list-item.placeholder {
-  height: 38px;
-}
 .list-item.dragged {
   background: yellow;
 }
