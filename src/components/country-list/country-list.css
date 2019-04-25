@@ -1,0 +1,31 @@
+.list-item {
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background: #f1f1f1;
+}
+
+.list-item > span {
+  padding: 10px;
+  display: inline-block;
+}
+
+.list-item > span.points {
+  float: right;
+}
+
+.list-item > span.position {
+  width: 22px;
+}
+
+.list-item.placeholder > span {
+  display: none;
+}
+
+.list-item.placeholder {
+  height: 38px;
+}
+.list-item.dragged {
+  background: yellow;
+}
