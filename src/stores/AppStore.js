@@ -6,11 +6,18 @@ const Country = types.model("Country", {
   id: types.identifier
 });
 
+const Points = types.model("Points", {
+  votingCountry: types.string,
+  name: types.string,
+  points: types.array(types.frozen())
+});
+
 const AppStore = types
   .model("AppStore", {
     name: types.maybeNull(types.string),
     country: types.maybeNull(types.string),
-    countries: types.array(Country)
+    countries: types.array(Country),
+    standings: types.array(Points)
   })
   .actions(self => ({
     afterCreate() {

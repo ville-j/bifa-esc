@@ -1,4 +1,64 @@
 {
-  "countries": [],
-  "points": []
+  "countries": [
+    {
+      "id": "uk",
+      "name": "ville"
+    },
+    {
+      "id": "fi",
+      "name": "ville"
+    },
+    {
+      "id": "sv",
+      "name": "ville"
+    }
+  ],
+  "points": [
+    {
+      "votingCountry": "sv",
+      "name": "ville",
+      "points": [
+        {
+          "country": "uk",
+          "points": 12
+        },
+        {
+          "country": "fi",
+          "points": 10
+        },
+        {
+          "country": "de",
+          "points": 8
+        },
+        {
+          "country": "es",
+          "points": 7
+        },
+        {
+          "country": "fr",
+          "points": 6
+        },
+        {
+          "country": "cr",
+          "points": 5
+        },
+        {
+          "country": "bg",
+          "points": 4
+        },
+        {
+          "country": "no",
+          "points": 3
+        },
+        {
+          "country": "ee",
+          "points": 2
+        },
+        {
+          "country": "pl",
+          "points": 1
+        }
+      ]
+    }
+  ]
 }

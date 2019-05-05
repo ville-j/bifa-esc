@@ -18,7 +18,7 @@ const store = AppStore.create(
 
 const snapshot = localStorage.getItem("bifaesc/state");
 if (snapshot) {
-  //applySnapshot(store, JSON.parse(snapshot));
+  applySnapshot(store, JSON.parse(snapshot));
 }
 
 onSnapshot(store, snapshot => {
