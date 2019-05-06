@@ -56,6 +56,37 @@ wss.on("connection", function connection(ws) {
               .assign({ ...data.payload })
               .write();
           }
+          wss.clients.forEach(function each(client) {
+            if (client.readyState === WebSocket.OPEN) {
+              client.send(
+                JSON.stringify({
+                  event: "getvotes",
+                  payload: db.get("points").value()
+                })
+              );
+            }
+          });
+          break;
+        case "getvotes":
+          ws.send(
+            JSON.stringify({
+              event: "getvotes",
+              payload: db.get("points").value()
+            })
+          );
+          break;
+        case "applyvotes":
+          console.log(data.payload);
+          wss.clients.forEach(function each(client) {
+            if (client.readyState === WebSocket.OPEN) {
+              client.send(
+                JSON.stringify({
+                  event: "applyvotes",
+                  payload: data.payload
+                })
+              );
+            }
+          });
           break;
         default:
           throw Error(`unsupported event ${data.event}`);
@@ -65,3 +96,11 @@ wss.on("connection", function connection(ws) {
     }
   });
 });
+
+wss.broadcast = function broadcast(data) {
+  wss.clients.forEach(function each(client) {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(data);
+    }
+  });
+};

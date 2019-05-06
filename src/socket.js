@@ -10,8 +10,11 @@ const socket = {
       })
     );
   },
-  on(event, callback) {
+  on: (event, callback) => {
     hooks.push({ event, callback });
+  },
+  instance: () => {
+    return ws;
   }
 };
 
