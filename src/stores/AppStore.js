@@ -1,9 +1,11 @@
 import { types, getEnv } from "mobx-state-tree";
 import points from "../points";
+import countries from "../countries";
 
 const Country = types.model("Country", {
   name: types.string,
-  id: types.identifier
+  id: types.identifier,
+  ord: types.number
 });
 
 const Points = types.model("Points", {
@@ -24,7 +26,8 @@ const AppStore = types
         name: "",
         country: ""
       })
-    )
+    ),
+    activeVotes: types.array(types.frozen())
   })
   .actions(self => ({
     afterCreate() {
@@ -34,12 +37,12 @@ const AppStore = types
       });
 
       self.socket.on("getvotes", data => {
-        console.log(data);
+        //console.log(data);
         self.setQueue(data);
       });
 
       self.socket.on("applyvotes", data => {
-        console.log(data);
+        //console.log(data);
         self.updateStandings(data);
       });
 
@@ -51,6 +54,8 @@ const AppStore = types
       const index = self.standings.findIndex(
         s => s.votingCountry === data.votingCountry
       );
+
+      self.activeVotes = data.points;
 
       if (index > -1) self.standings[index] = data;
       else self.standings.push(data);
@@ -68,9 +73,11 @@ const AppStore = types
     setQueue(queue) {
       self.queue = queue;
     },
-    applyVotes(data) {
-      console.log(data);
-      self.socket.send("applyvotes", data);
+    applyVotes(data, removeCount) {
+      let d = { ...data, points: [...data.points] };
+
+      d.points.splice(0, removeCount);
+      self.socket.send("applyvotes", d);
     },
     vote() {
       const givenPoints = points.map((p, i) => ({
@@ -90,6 +97,22 @@ const AppStore = types
     },
     get socket() {
       return getEnv(self).socket;
+    },
+    get totalStandings() {
+      return countries
+        .map(c => {
+          const points = self.standings.map(s => {
+            return s.points.filter(p => p.country === c.id).map(p => p.points);
+          });
+          const totalPoints = points.reduce((acc, cur) => {
+            acc += cur[0] ? cur[0] : 0;
+            return acc;
+          }, 0);
+          return { ...c, points: totalPoints };
+        })
+        .sort((a, b) => {
+          return b.points - a.points;
+        });
     }
   }));
 

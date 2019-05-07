@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "flag-icon-css": "^3.3.0",
     "lowdb": "^1.0.0",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",

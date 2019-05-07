@@ -1,0 +1,57 @@
+.Standings {
+  padding: 2%;
+}
+
+.Standings .points {
+  column-count: 2;
+  column-gap: 0;
+  width: 65%;
+  max-width: 900px;
+}
+
+.Standings .presenting-country {
+  float: left;
+  width: 35%;
+}
+
+.Standings .country {
+  font-size: 25px;
+  padding: 10px;
+  background: #11225c;
+  margin: 4px 2px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.Standings .country.active {
+  background: #2e49a6;
+}
+
+.Standings .country:first-child {
+  margin-top: 0;
+}
+
+.Standings .country .single-points {
+  float: right;
+  text-align: right;
+  width: 50px;
+  font-weight: 800;
+  margin-right: 20px;
+}
+
+.Standings .country .given-points {
+  float: right;
+  background: orange;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #000;
+  font-weight: 800;
+  text-align: center;
+  line-height: 30px;
+}
+
+.Standings .country .flag-icon {
+  margin-right: 15px;
+}

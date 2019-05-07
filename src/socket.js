@@ -1,4 +1,4 @@
-const ws = new WebSocket("ws://192.168.1.2:8123");
+const ws = new WebSocket("ws://localhost:8123");
 const hooks = [];
 
 const socket = {

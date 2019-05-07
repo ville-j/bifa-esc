@@ -1,49 +1,195 @@
 {
   "countries": [
     {
-      "id": "uk",
+      "id": "ru",
+      "name": "asdasdasd"
+    },
+    {
+      "id": "no",
+      "name": "sdffds"
+    },
+    {
+      "id": "gr",
+      "name": "sdf"
+    },
+    {
+      "id": "is",
       "name": "ville"
     },
     {
       "id": "fi",
-      "name": "ville"
+      "name": "esa"
     },
     {
-      "id": "sv",
-      "name": "ville"
+      "id": "pt",
+      "name": "merja"
     },
     {
       "id": "de",
-      "name": "janne"
+      "name": ""
     },
     {
-      "id": "es",
-      "name": "mikko"
+      "id": "nl",
+      "name": ""
     },
     {
-      "id": "fr",
-      "name": "jaska"
-    },
-    {
-      "id": "cr",
-      "name": "helmi"
+      "id": "pl",
+      "name": "momo"
     }
   ],
   "points": [
     {
-      "votingCountry": "sv",
+      "votingCountry": "gr",
+      "name": "sdf",
+      "points": [
+        {
+          "country": "pt",
+          "points": 12
+        },
+        {
+          "country": "pl",
+          "points": 10
+        },
+        {
+          "country": "ch",
+          "points": 8
+        },
+        {
+          "country": "ru",
+          "points": 7
+        },
+        {
+          "country": "is",
+          "points": 6
+        },
+        {
+          "country": "no",
+          "points": 5
+        },
+        {
+          "country": "fi",
+          "points": 4
+        },
+        {
+          "country": "ro",
+          "points": 3
+        },
+        {
+          "country": "de",
+          "points": 2
+        },
+        {
+          "country": "nl",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "votingCountry": "is",
       "name": "ville",
       "points": [
         {
-          "country": "uk",
+          "country": "pl",
           "points": 12
         },
         {
-          "country": "fi",
+          "country": "de",
           "points": 10
         },
         {
+          "country": "gr",
+          "points": 8
+        },
+        {
+          "country": "no",
+          "points": 7
+        },
+        {
+          "country": "fi",
+          "points": 6
+        },
+        {
+          "country": "gb",
+          "points": 5
+        },
+        {
+          "country": "ru",
+          "points": 4
+        },
+        {
+          "country": "pt",
+          "points": 3
+        },
+        {
+          "country": "mt",
+          "points": 2
+        },
+        {
+          "country": "nl",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "votingCountry": "fi",
+      "name": "esa",
+      "points": [
+        {
+          "country": "mt",
+          "points": 12
+        },
+        {
+          "country": "ru",
+          "points": 10
+        },
+        {
+          "country": "no",
+          "points": 8
+        },
+        {
+          "country": "gr",
+          "points": 7
+        },
+        {
+          "country": "is",
+          "points": 6
+        },
+        {
+          "country": "pt",
+          "points": 5
+        },
+        {
           "country": "de",
+          "points": 4
+        },
+        {
+          "country": "nl",
+          "points": 3
+        },
+        {
+          "country": "pl",
+          "points": 2
+        },
+        {
+          "country": "gb",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "votingCountry": "pt",
+      "name": "merja",
+      "points": [
+        {
+          "country": "fr",
+          "points": 12
+        },
+        {
+          "country": "gb",
+          "points": 10
+        },
+        {
+          "country": "ro",
           "points": 8
         },
         {
@@ -51,15 +197,15 @@
           "points": 7
         },
         {
-          "country": "fr",
+          "country": "ee",
           "points": 6
         },
         {
-          "country": "cr",
+          "country": "it",
           "points": 5
         },
         {
-          "country": "bg",
+          "country": "ru",
           "points": 4
         },
         {
@@ -67,7 +213,53 @@
           "points": 3
         },
         {
-          "country": "ee",
+          "country": "gr",
+          "points": 2
+        },
+        {
+          "country": "is",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "votingCountry": "nl",
+      "name": "",
+      "points": [
+        {
+          "country": "ro",
+          "points": 12
+        },
+        {
+          "country": "il",
+          "points": 10
+        },
+        {
+          "country": "ru",
+          "points": 8
+        },
+        {
+          "country": "no",
+          "points": 7
+        },
+        {
+          "country": "gr",
+          "points": 6
+        },
+        {
+          "country": "is",
+          "points": 5
+        },
+        {
+          "country": "fi",
+          "points": 4
+        },
+        {
+          "country": "pt",
+          "points": 3
+        },
+        {
+          "country": "de",
           "points": 2
         },
         {
@@ -77,185 +269,47 @@
       ]
     },
     {
-      "votingCountry": "de",
-      "name": "janne",
+      "votingCountry": "pl",
+      "name": "momo",
       "points": [
         {
-          "country": "pl",
+          "country": "ru",
           "points": 12
-        },
-        {
-          "country": "es",
-          "points": 10
-        },
-        {
-          "country": "bg",
-          "points": 8
-        },
-        {
-          "country": "uk",
-          "points": 7
-        },
-        {
-          "country": "ml",
-          "points": 6
-        },
-        {
-          "country": "fi",
-          "points": 5
-        },
-        {
-          "country": "sv",
-          "points": 4
-        },
-        {
-          "country": "fr",
-          "points": 3
-        },
-        {
-          "country": "cr",
-          "points": 2
         },
         {
           "country": "no",
-          "points": 1
-        }
-      ]
-    },
-    {
-      "votingCountry": "es",
-      "name": "mikko",
-      "points": [
-        {
-          "country": "de",
-          "points": 12
-        },
-        {
-          "country": "sv",
           "points": 10
         },
         {
-          "country": "uk",
+          "country": "gr",
           "points": 8
         },
         {
-          "country": "fi",
+          "country": "is",
           "points": 7
         },
         {
-          "country": "bg",
+          "country": "fi",
           "points": 6
         },
         {
-          "country": "fr",
+          "country": "pt",
           "points": 5
-        },
-        {
-          "country": "cr",
-          "points": 4
-        },
-        {
-          "country": "no",
-          "points": 3
-        },
-        {
-          "country": "ee",
-          "points": 2
-        },
-        {
-          "country": "pl",
-          "points": 1
-        }
-      ]
-    },
-    {
-      "votingCountry": "fr",
-      "name": "jaska",
-      "points": [
-        {
-          "country": "de",
-          "points": 12
-        },
-        {
-          "country": "uk",
-          "points": 10
-        },
-        {
-          "country": "fi",
-          "points": 8
-        },
-        {
-          "country": "sv",
-          "points": 7
-        },
-        {
-          "country": "es",
-          "points": 6
-        },
-        {
-          "country": "cr",
-          "points": 5
-        },
-        {
-          "country": "bg",
-          "points": 4
-        },
-        {
-          "country": "no",
-          "points": 3
-        },
-        {
-          "country": "ee",
-          "points": 2
-        },
-        {
-          "country": "pl",
-          "points": 1
-        }
-      ]
-    },
-    {
-      "votingCountry": "cr",
-      "name": "helmi",
-      "points": [
-        {
-          "country": "uk",
-          "points": 12
-        },
-        {
-          "country": "fi",
-          "points": 10
-        },
-        {
-          "country": "sv",
-          "points": 8
         },
         {
           "country": "de",
-          "points": 7
-        },
-        {
-          "country": "es",
-          "points": 6
-        },
-        {
-          "country": "fr",
-          "points": 5
-        },
-        {
-          "country": "bg",
           "points": 4
         },
         {
-          "country": "no",
+          "country": "nl",
           "points": 3
         },
         {
-          "country": "ee",
+          "country": "mt",
           "points": 2
         },
         {
-          "country": "pl",
+          "country": "gb",
           "points": 1
         }
       ]

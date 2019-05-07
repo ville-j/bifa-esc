@@ -4,10 +4,15 @@
 
 .list-item {
   cursor: pointer;
+  background: #11225c;
+  border: 1px solid #5359b1;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  border-radius: 5px;
 }
 
 .list-item:hover {
-  background: #f1f1f1;
 }
 
 .list-item > span {
@@ -15,8 +20,15 @@
   display: inline-block;
 }
 
-.list-item > span.points {
+.list-item > span.points,
+.list-item > span.flag {
   float: right;
+}
+
+.list-item > span.points {
+  width: 50px;
+  text-align: right;
+  font-weight: 800;
 }
 
 .list-item > span.position {
@@ -28,5 +40,11 @@
 }
 
 .list-item.dragged {
-  background: yellow;
+  background: #8a9fcd;
+  margin: 0;
+}
+
+.list-item.own-country {
+  background: transparent;
+  border: 0;
 }

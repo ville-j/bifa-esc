@@ -1,0 +1,9 @@
+.Queue > .country-points {
+  padding: 10px;
+}
+
+.Queue > .country-points button {
+  padding: 10px;
+  margin-right: 10px;
+  width: 100px;
+}

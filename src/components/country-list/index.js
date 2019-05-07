@@ -2,6 +2,7 @@ import React from "react";
 import { inject, observer } from "mobx-react";
 import Reorder, { reorder } from "react-reorder";
 import points from "../../points";
+import Flag from "../flag";
 import "./country-list.css";
 
 const CountryList = ({
@@ -22,13 +23,20 @@ const CountryList = ({
         {countries.map((c, i) => {
           if (c.id === country) j += 1;
           return (
-            <div key={c.id} className="list-item disable-select">
-              <span className="position">
-                {c.id !== country && `${i + 1 - j}.`}
-              </span>
+            <div
+              key={c.id}
+              className={
+                "list-item disable-select" +
+                (c.id === country ? " own-country" : "")
+              }
+            >
+              <span className="position">{c.ord}.</span>
               <span className="name">{c.name}</span>
               <span className="points">
                 {c.id !== country && points[i - j] && `${points[i - j]}p`}
+              </span>
+              <span className="flag">
+                <Flag country={c.id} />
               </span>
             </div>
           );
