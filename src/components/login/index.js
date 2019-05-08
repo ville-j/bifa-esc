@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { inject } from "mobx-react";
+import logo from "../../assets/logo.png";
+import "./login.css";
 
 const Login = ({ store }) => {
+  const [value, setValue] = useState("");
   let input;
   return (
     <div className="Login">
-      <h3>Nimi</h3>
-      <input type="text" ref={el => (input = el)} />
+      <img src={logo} alt="logo" />
+      <h3>Kuka olet?</h3>
+      <input
+        type="text"
+        ref={el => (input = el)}
+        placeholder="Nimi"
+        onChange={() => {
+          setValue(input.value);
+        }}
+      />
       <div
-        className="main-button"
+        className={"main-button" + (value.length > 0 ? "" : " disabled")}
         role="button"
         onClick={() => {
-          store.register(input.value);
+          value.length > 0 && store.register(value);
         }}
       >
-        Seuraava
+        Jatka
       </div>
     </div>
   );

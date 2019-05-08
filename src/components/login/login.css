@@ -1,0 +1,20 @@
+.Login {
+  width: 280px;
+  margin: auto;
+}
+
+.Login img {
+  width: 280px;
+  margin: auto;
+  display: block;
+  margin-top: 70px;
+  margin-bottom: 200px;
+}
+
+.Login input {
+  width: 280px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  color: #06132c;
+  font-family: inherit;
+}

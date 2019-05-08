@@ -2,15 +2,23 @@
 }
 
 .main-button {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   box-sizing: border-box;
-  background: #a71d68;
   text-align: center;
   padding: 15px;
-  color: #fff;
+  color: #040920;
   cursor: pointer;
+  width: 170px;
+  margin: auto;
+  background: #d3e1ff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.main-button.disabled {
+  background: #6a748e;
 }
 
 .disable-select {
@@ -18,4 +26,14 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+
+input {
+  font-size: 24px;
+  padding: 10px;
 }
