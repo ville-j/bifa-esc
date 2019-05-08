@@ -27,8 +27,12 @@ const AppStore = types
         country: ""
       })
     ),
-    activeVotes: types.array(types.frozen())
+    activeVotes: types.array(types.frozen()),
+    confirmVotes: types.optional(types.boolean, false)
   })
+  .volatile(self => ({
+    splash: types.optional(types.boolean, true)
+  }))
   .actions(self => ({
     afterCreate() {
       self.socket.on("country", data => {
@@ -66,6 +70,12 @@ const AppStore = types
     register(name) {
       self.name = name;
       self.socket.send("register", { name });
+    },
+    setSplash(bool) {
+      self.splash = bool;
+    },
+    setConfirmVotes(bool) {
+      self.confirmVotes = bool;
     },
     updateCountries(countries) {
       self.countries = countries;

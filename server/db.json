@@ -47,6 +47,26 @@
     {
       "id": "ro",
       "name": "a"
+    },
+    {
+      "id": "fr",
+      "name": "fsdf"
+    },
+    {
+      "id": "ch",
+      "name": "dfbdfb"
+    },
+    {
+      "id": "se",
+      "name": "dfg"
+    },
+    {
+      "id": "am",
+      "name": "ville"
+    },
+    {
+      "id": "au",
+      "name": "Mikko"
     }
   ],
   "points": [
@@ -322,6 +342,52 @@
         },
         {
           "country": "gb",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "votingCountry": "au",
+      "name": "Mikko",
+      "points": [
+        {
+          "country": "is",
+          "points": 12
+        },
+        {
+          "country": "gr",
+          "points": 10
+        },
+        {
+          "country": "nl",
+          "points": 8
+        },
+        {
+          "country": "fr",
+          "points": 7
+        },
+        {
+          "country": "pt",
+          "points": 6
+        },
+        {
+          "country": "de",
+          "points": 5
+        },
+        {
+          "country": "pl",
+          "points": 4
+        },
+        {
+          "country": "mt",
+          "points": 3
+        },
+        {
+          "country": "gb",
+          "points": 2
+        },
+        {
+          "country": "no",
           "points": 1
         }
       ]

@@ -4,10 +4,11 @@
 .main-button {
   box-sizing: border-box;
   text-align: center;
-  padding: 15px;
+  padding: 15px 30px;
   color: #040920;
   cursor: pointer;
-  width: 170px;
+  min-width: 170px;
+  display: inline-block;
   margin: auto;
   background: #d3e1ff;
   text-transform: uppercase;

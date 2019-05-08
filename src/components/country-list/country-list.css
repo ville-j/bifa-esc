@@ -1,5 +1,6 @@
 .CountryList {
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .list-item {
@@ -10,6 +11,7 @@
   font-size: 24px;
   font-weight: 300;
   border-radius: 5px;
+  text-align: left;
 }
 
 .list-item:hover {
@@ -47,4 +49,73 @@
 .list-item.own-country {
   background: transparent;
   border: 0;
+}
+
+.CountryList .country-splash {
+  background: #02071d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.CountryList .country-splash .country-image-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.CountryList .country-splash .country-image-container img {
+  max-width: 200%;
+  margin-left: -25%;
+  margin-bottom: 30px;
+}
+
+.title1 {
+  margin-top: 70px;
+}
+
+.title1,
+.title2 {
+  font-size: 30px;
+}
+
+.title2 {
+  font-weight: 700;
+}
+
+.silly-q {
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.confirm-votes {
+  background: #02071d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 90;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-top: 200px;
+}
+
+.confirm-votes .main-button {
+  margin-top: 50px;
+}
+
+.cancel-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
 }
