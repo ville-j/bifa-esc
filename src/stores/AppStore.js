@@ -28,7 +28,13 @@ const AppStore = types
       })
     ),
     activeVotes: types.array(types.frozen()),
-    confirmVotes: types.optional(types.boolean, false)
+    confirmVotes: types.optional(types.boolean, false),
+    activatedCountry: types.optional(
+      types.frozen({
+        votingCountry: "",
+        name: ""
+      })
+    )
   })
   .volatile(self => ({
     splash: types.optional(types.boolean, true)
@@ -41,13 +47,15 @@ const AppStore = types
       });
 
       self.socket.on("getvotes", data => {
-        //console.log(data);
         self.setQueue(data);
       });
 
       self.socket.on("applyvotes", data => {
-        //console.log(data);
         self.updateStandings(data);
+      });
+
+      self.socket.on("activate", data => {
+        self.setActiveCountry(data);
       });
 
       self.socket.instance().onopen = () => {
@@ -66,6 +74,10 @@ const AppStore = types
     },
     setCountry(country) {
       self.country = country;
+    },
+    setActiveCountry(country) {
+      self.activeVotes = [];
+      self.activatedCountry = country;
     },
     register(name) {
       self.name = name;
@@ -99,6 +111,9 @@ const AppStore = types
         name: self.name,
         points: givenPoints
       });
+    },
+    activate(country) {
+      self.socket.send("activate", country);
     }
   }))
   .views(self => ({

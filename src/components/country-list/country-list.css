@@ -12,6 +12,7 @@
   font-weight: 300;
   border-radius: 5px;
   text-align: left;
+  overflow: hidden;
 }
 
 .list-item:hover {

@@ -76,12 +76,23 @@ wss.on("connection", function connection(ws) {
           );
           break;
         case "applyvotes":
-          console.log(data.payload);
           wss.clients.forEach(function each(client) {
             if (client.readyState === WebSocket.OPEN) {
               client.send(
                 JSON.stringify({
                   event: "applyvotes",
+                  payload: data.payload
+                })
+              );
+            }
+          });
+          break;
+        case "activate":
+          wss.clients.forEach(function each(client) {
+            if (client.readyState === WebSocket.OPEN) {
+              client.send(
+                JSON.stringify({
+                  event: "activate",
                   payload: data.payload
                 })
               );

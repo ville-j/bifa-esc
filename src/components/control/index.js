@@ -3,7 +3,7 @@ import { inject, observer } from "mobx-react";
 import countries from "../../countries";
 import "./control.css";
 
-const Control = ({ store: { queue, applyVotes } }) => {
+const Control = ({ store: { queue, applyVotes, activate } }) => {
   return (
     <div className="Queue">
       {queue.map(q => {
@@ -13,7 +13,13 @@ const Control = ({ store: { queue, applyVotes } }) => {
               {countries.find(c => c.id === q.votingCountry).name} ({q.name})
             </div>
             <div>
-              <button>activate</button>
+              <button
+                onClick={() => {
+                  activate(q);
+                }}
+              >
+                activate
+              </button>
               <button
                 onClick={() => {
                   applyVotes(q, 3);

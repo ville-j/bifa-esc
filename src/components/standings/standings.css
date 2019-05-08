@@ -14,6 +14,12 @@
   width: 35%;
 }
 
+.Standings .presenting-country img {
+  width: 270%;
+  margin-left: -60%;
+  margin-top: -20%;
+}
+
 .Standings .country {
   font-size: 25px;
   padding: 10px;
@@ -54,4 +60,17 @@
 
 .Standings .country .flag-icon {
   margin-right: 15px;
+}
+
+.names {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.a-country {
+  font-weight: 700;
+  text-transform: uppercase;
 }
