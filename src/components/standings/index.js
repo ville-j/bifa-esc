@@ -12,18 +12,20 @@ const Standings = ({
       <div className="presenting-country">
         {activatedCountry.votingCountry && (
           <React.Fragment>
-            <img
-              src={`stars/${activatedCountry.votingCountry}.jpg`}
-              alt="your country"
-            />
-            <div className="names">
-              <div className="a-country">
-                {
-                  countries.find(c => c.id === activatedCountry.votingCountry)
-                    .name
-                }
+            <div className="img-container">
+              <img
+                src={`stars/${activatedCountry.votingCountry}.jpg`}
+                alt="your country"
+              />
+              <div className="names">
+                <div className="a-country">
+                  {
+                    countries.find(c => c.id === activatedCountry.votingCountry)
+                      .name
+                  }
+                </div>
+                <div className="a-person">{activatedCountry.name}</div>
               </div>
-              <div className="a-person">{activatedCountry.name}</div>
             </div>
           </React.Fragment>
         )}

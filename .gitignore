@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/GT-Eesti-Display-Medium.woff
+/src/GT-Eesti-Display-Thin-2.woff

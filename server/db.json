@@ -71,6 +71,10 @@
     {
       "id": "ie",
       "name": "Ville"
+    },
+    {
+      "id": "cy",
+      "name": "Ulla"
     }
   ],
   "points": [
@@ -355,43 +359,43 @@
       "name": "Mikko",
       "points": [
         {
-          "country": "is",
+          "country": "mt",
           "points": 12
         },
         {
-          "country": "gr",
+          "country": "gb",
           "points": 10
         },
         {
-          "country": "nl",
+          "country": "no",
           "points": 8
         },
         {
-          "country": "fr",
+          "country": "gr",
           "points": 7
         },
         {
-          "country": "pt",
+          "country": "is",
           "points": 6
         },
         {
-          "country": "de",
+          "country": "nl",
           "points": 5
         },
         {
-          "country": "pl",
+          "country": "fr",
           "points": 4
         },
         {
-          "country": "mt",
+          "country": "pt",
           "points": 3
         },
         {
-          "country": "gb",
+          "country": "de",
           "points": 2
         },
         {
-          "country": "no",
+          "country": "pl",
           "points": 1
         }
       ]
@@ -438,6 +442,52 @@
         },
         {
           "country": "it",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "votingCountry": "cy",
+      "name": "Ulla",
+      "points": [
+        {
+          "country": "fr",
+          "points": 12
+        },
+        {
+          "country": "ro",
+          "points": 10
+        },
+        {
+          "country": "de",
+          "points": 8
+        },
+        {
+          "country": "ch",
+          "points": 7
+        },
+        {
+          "country": "se",
+          "points": 6
+        },
+        {
+          "country": "cz",
+          "points": 5
+        },
+        {
+          "country": "pt",
+          "points": 4
+        },
+        {
+          "country": "ru",
+          "points": 3
+        },
+        {
+          "country": "no",
+          "points": 2
+        },
+        {
+          "country": "is",
           "points": 1
         }
       ]

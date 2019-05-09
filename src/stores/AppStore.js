@@ -34,7 +34,8 @@ const AppStore = types
         votingCountry: "",
         name: ""
       })
-    )
+    ),
+    voted: types.optional(types.boolean, false)
   })
   .volatile(self => ({
     splash: types.optional(types.boolean, true)
@@ -58,6 +59,10 @@ const AppStore = types
         self.setActiveCountry(data);
       });
 
+      self.socket.on("votesuccess", data => {
+        self.setVoted(true);
+      });
+
       self.socket.instance().onopen = () => {
         self.socket.send("getvotes");
       };
@@ -74,6 +79,9 @@ const AppStore = types
     },
     setCountry(country) {
       self.country = country;
+    },
+    setVoted(bool) {
+      self.voted = bool;
     },
     setActiveCountry(country) {
       self.activeVotes = [];

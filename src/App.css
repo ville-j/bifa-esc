@@ -1,4 +1,16 @@
+@font-face {
+  font-family: "GT-Eesti";
+  src: local("GT-Eesti"), url(./GT-Eesti-Display-Thin-2.woff) format("woff");
+}
+
+@font-face {
+  font-family: "GT-Eesti";
+  src: local("GT-Eesti"), url(./GT-Eesti-Display-Medium.woff) format("woff");
+  font-weight: 700;
+}
+
 .App {
+  font-family: "GT-Eesti";
 }
 
 .main-button {

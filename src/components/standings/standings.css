@@ -7,6 +7,7 @@
   column-gap: 0;
   width: 65%;
   max-width: 900px;
+  position: relative;
 }
 
 .Standings .presenting-country {
@@ -14,10 +15,15 @@
   width: 35%;
 }
 
-.Standings .presenting-country img {
+.Standings .presenting-country .img-container {
   width: 270%;
   margin-left: -60%;
   margin-top: -20%;
+  position: relative;
+}
+
+.Standings .presenting-country .img-container img {
+  width: 100%;
 }
 
 .Standings .country {
@@ -69,8 +75,8 @@
 
 .names {
   position: absolute;
-  top: 50%;
-  left: 12%;
+  top: 67%;
+  left: 33.5%;
   text-transform: uppercase;
   font-size: 30px;
 }

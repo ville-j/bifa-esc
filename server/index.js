@@ -56,6 +56,12 @@ wss.on("connection", function connection(ws) {
               .assign({ ...data.payload })
               .write();
           }
+          ws.send(
+            JSON.stringify({
+              event: "votesuccess"
+            })
+          );
+
           wss.clients.forEach(function each(client) {
             if (client.readyState === WebSocket.OPEN) {
               client.send(

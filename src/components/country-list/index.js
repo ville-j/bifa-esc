@@ -14,7 +14,8 @@ const CountryList = ({
     splash,
     setSplash,
     confirmVotes,
-    setConfirmVotes
+    setConfirmVotes,
+    voted
   }
 }) => {
   const onReorder = (e, previousIndex, nextIndex, fromId, toId) => {
@@ -73,16 +74,20 @@ const CountryList = ({
               );
             })}
           </Reorder>
-          <div className="silly-q">Oletko valmis?</div>
-          <div
-            role="button"
-            className="main-button"
-            onClick={() => {
-              setConfirmVotes(true);
-            }}
-          >
-            Kyllä
-          </div>
+          {!voted && (
+            <React.Fragment>
+              <div className="silly-q">Oletko valmis?</div>
+              <div
+                role="button"
+                className="main-button"
+                onClick={() => {
+                  setConfirmVotes(true);
+                }}
+              >
+                Kyllä
+              </div>
+            </React.Fragment>
+          )}
           {confirmVotes && (
             <div className="confirm-votes">
               <div
@@ -91,13 +96,18 @@ const CountryList = ({
                   setConfirmVotes(false);
                 }}
               >
-                Peruuta
+                Sulje
               </div>
-              Varmista äänten lähettäminen
-              <br />
-              <div role="button" className="main-button" onClick={vote}>
-                Lähetä äänet
-              </div>
+              {!voted && (
+                <React.Fragment>
+                  Varmista äänten lähettäminen
+                  <br />
+                  <div role="button" className="main-button" onClick={vote}>
+                    Lähetä äänet
+                  </div>
+                </React.Fragment>
+              )}
+              {voted && <span>Äänesi on rekisteröity!</span>}
             </div>
           )}
         </React.Fragment>
