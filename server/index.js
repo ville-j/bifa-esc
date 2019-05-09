@@ -7,6 +7,8 @@ const adapter = new FileSync("./db.json");
 const db = low(adapter);
 const countries = require("./countries");
 
+console.log("listening port 8123");
+
 wss.on("connection", function connection(ws) {
   ws.on("message", function incoming(message) {
     try {

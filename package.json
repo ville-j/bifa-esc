@@ -2,6 +2,7 @@
   "name": "bifa-esc",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://janka.la/esc",
   "dependencies": {
     "flag-icon-css": "^3.3.0",
     "lowdb": "^1.0.0",
