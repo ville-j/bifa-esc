@@ -58,6 +58,11 @@
   line-height: 30px;
 }
 
+.Standings .country .given-points.p8,
+.Standings .country .given-points.p10,
+.Standings .country .given-points.p12 {
+  background: #db28e2;
+}
 .Standings .country .flag-icon {
   margin-right: 15px;
 }

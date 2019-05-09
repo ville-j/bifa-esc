@@ -37,7 +37,9 @@ const Standings = ({
               <span>{c.name}</span>
               <span className="single-points">{c.points}</span>
               {pointing && (
-                <span className="given-points">{pointing.points}</span>
+                <span className={`given-points p${pointing.points}`}>
+                  {pointing.points}
+                </span>
               )}
             </div>
           );

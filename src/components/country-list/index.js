@@ -81,7 +81,7 @@ const CountryList = ({
               setConfirmVotes(true);
             }}
           >
-            Lähetä äänet
+            Kyllä
           </div>
           {confirmVotes && (
             <div className="confirm-votes">

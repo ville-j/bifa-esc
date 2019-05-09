@@ -67,6 +67,10 @@
     {
       "id": "au",
       "name": "Mikko"
+    },
+    {
+      "id": "ie",
+      "name": "Ville"
     }
   ],
   "points": [
@@ -388,6 +392,52 @@
         },
         {
           "country": "no",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "votingCountry": "ie",
+      "name": "Ville",
+      "points": [
+        {
+          "country": "ee",
+          "points": 12
+        },
+        {
+          "country": "cy",
+          "points": 10
+        },
+        {
+          "country": "sm",
+          "points": 8
+        },
+        {
+          "country": "am",
+          "points": 7
+        },
+        {
+          "country": "ch",
+          "points": 6
+        },
+        {
+          "country": "gb",
+          "points": 5
+        },
+        {
+          "country": "mt",
+          "points": 4
+        },
+        {
+          "country": "au",
+          "points": 3
+        },
+        {
+          "country": "cz",
+          "points": 2
+        },
+        {
+          "country": "it",
           "points": 1
         }
       ]
